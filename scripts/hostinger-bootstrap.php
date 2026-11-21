@@ -9,9 +9,17 @@
 $root = dirname(__DIR__);
 chdir($root);
 
-$isHostinger = is_dir('/home/u796881501') || str_contains(str_replace('\\', '/', $root), '/domains/');
+$normalizedRoot = str_replace('\\', '/', $root);
+$isHostinger = is_dir('/home/u796881501') || str_contains($normalizedRoot, '/domains/');
 if (!$isHostinger) {
     fwrite(STDOUT, "Hostinger bootstrap skipped (local environment)\n");
+    exit(0);
+}
+
+// Hostinger Git runs composer inside ~/.git_clones/... before publishing.
+// Never migrate/cache from that temp tree.
+if (str_contains($normalizedRoot, '/.git_clones/')) {
+    fwrite(STDOUT, "Hostinger bootstrap skipped (build clone stage)\n");
     exit(0);
 }
 

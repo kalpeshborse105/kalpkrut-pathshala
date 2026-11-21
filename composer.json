@@ -36,11 +36,10 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
-        "post-install-cmd": [
-            "@php scripts/hostinger-bootstrap.php"
-        ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "hostinger-bootstrap": [
             "@php scripts/hostinger-bootstrap.php"
         ],
         "post-create-project-cmd": [
