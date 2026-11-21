@@ -1,0 +1,2917 @@
+﻿# MASTER DEVELOPMENT PROMPT
+# COACHING INSTITUTE MANAGEMENT ERP
+## Complete Institute, Academy, Tuition Centre, Training Centre & Learning Management Software
+### Laravel + PHP + MySQL | Production-Ready Enterprise Application
+
+---
+
+# 1. PROJECT OBJECTIVE
+
+Act as a senior Laravel architect, education technology consultant, ERP developer, database architect, UI/UX designer, and academic operations specialist.
+
+Your task is to develop a complete, production-ready Coaching Institute Management ERP using Laravel, PHP, and MySQL.
+
+This must be a comprehensive business management and academic management system, not merely a student registration application.
+
+The application must manage the complete lifecycle of an educational institute:
+
+Enquiry → Lead Follow-up → Counselling → Admission → Course Enrollment → Batch Allocation → Fee Collection → Attendance → Teaching → Assignments → Examinations → Results → Certificates → Placement → Alumni.
+
+The system must support:
+
+1. Coaching institutes.
+2. Tuition centers.
+3. Competitive examination coaching.
+4. School tuition centers.
+5. Computer training institutes.
+6. Digital marketing academies.
+7. Web development training centers.
+8. Software development academies.
+9. Vocational training centers.
+10. Skill development centers.
+11. Language training institutes.
+12. Professional certification institutes.
+13. Online learning academies.
+14. Hybrid education centers.
+15. Multi-branch education businesses.
+
+The application should be configurable for different educational business models.
+
+Primary market: India.
+
+# 2. TECHNOLOGY STACK
+
+| Component | Technology |
+|---|---|
+| Backend | Latest stable Laravel |
+| Language | PHP 8.3+ |
+| Database | MySQL 8+ |
+| Frontend | Laravel Blade |
+| Interactive Components | Livewire |
+| CSS Framework | Tailwind CSS |
+| JavaScript | Alpine.js |
+| Charts | Chart.js |
+| Authentication | Laravel Authentication |
+| Authorization | Role-Based Access Control |
+| PDF | DomPDF or compatible PDF library |
+| Excel | Laravel Excel |
+| Queue | Laravel Queue |
+| Cache | Redis where available |
+| API | Laravel REST API |
+| Version Control | Git |
+
+Use stable, compatible dependencies.
+
+The application must run on a standard Linux VPS with Nginx or Apache.
+
+# 3. APPLICATION ARCHITECTURE
+
+Develop a modular, scalable, SaaS-ready architecture.
+
+Support:
+
+- Multiple education companies.
+- Multiple institutes.
+- Multiple branches.
+- Multiple academic sessions.
+- Multiple courses.
+- Multiple departments.
+- Multiple classrooms.
+- Multiple faculty members.
+- Multiple batches.
+- Multiple fee structures.
+- Multiple teaching modes.
+
+Every business record must belong to the appropriate company and branch.
+
+Support strict tenant-level data isolation.
+
+# 4. MAIN APPLICATION NAVIGATION
+
+Build a modern sidebar with the following modules.
+
+1. Dashboard
+2. Enquiries & Leads
+3. Admission Management
+4. Students
+5. Courses
+6. Subjects
+7. Batches
+8. Timetable
+9. Faculty & Staff
+10. Classroom Management
+11. Attendance
+12. Fee Management
+13. Expenses
+14. Examinations
+15. Results & Grades
+16. Assignments
+17. Study Materials
+18. Online Classes
+19. Learning Management System
+20. Certificates
+21. Placement & Internship
+22. Parent Portal
+23. Student Portal
+24. Faculty Portal
+25. Library
+26. Transport Management
+27. Hostel Management
+28. HR & Payroll
+29. Accounting
+30. Notifications
+31. Reports & Analytics
+32. Branch Management
+33. Website Management
+34. User Management
+35. Settings
+
+Use permission-based navigation.
+
+# 5. COMPANY, INSTITUTE AND BRANCH MANAGEMENT
+
+## 5.1 Company Profile
+
+Fields:
+
+- Company name.
+- Logo.
+- Registration number.
+- Business type.
+- PAN.
+- GSTIN.
+- Email.
+- Mobile number.
+- Website.
+- Registered address.
+- State.
+- City.
+- PIN code.
+- Bank details.
+- Financial year.
+- Currency.
+- Invoice prefix.
+- Receipt prefix.
+- Admission prefix.
+- Certificate prefix.
+
+## 5.2 Institute Management
+
+Support multiple institutes under one company.
+
+Fields:
+
+- Institute name.
+- Institute code.
+- Logo.
+- Institute type.
+- Contact person.
+- Address.
+- Contact details.
+- Website.
+- Operating hours.
+- Academic calendar.
+- Default grading system.
+- Default attendance rules.
+
+## 5.3 Branch Management
+
+Fields:
+
+- Branch name.
+- Branch code.
+- Address.
+- Branch manager.
+- Contact number.
+- Email.
+- Operating hours.
+- Number of classrooms.
+- Capacity.
+- Assigned employees.
+- Assigned faculty.
+- Branch status.
+
+Features:
+
+- Branch-wise admissions.
+- Branch-wise student count.
+- Branch-wise fee collection.
+- Branch-wise expenses.
+- Branch-wise attendance.
+- Branch-wise academic performance.
+- Branch-wise profitability.
+
+# 6. USER MANAGEMENT AND ROLE-BASED ACCESS CONTROL
+
+Create a complete user management system.
+
+## 6.1 Default Roles
+
+1. Super Administrator.
+2. Company Owner.
+3. Institute Administrator.
+4. Branch Manager.
+5. Admission Manager.
+6. Admission Counsellor.
+7. Accountant.
+8. Cashier.
+9. Academic Coordinator.
+10. Course Coordinator.
+11. Faculty.
+12. Visiting Faculty.
+13. Examination Controller.
+14. Librarian.
+15. HR Manager.
+16. Placement Officer.
+17. Student.
+18. Parent/Guardian.
+19. Transport Manager.
+20. Hostel Warden.
+21. Auditor.
+
+Allow custom roles and permissions.
+
+## 6.2 Permission Management
+
+Control access to:
+
+- Student records.
+- Admissions.
+- Course creation.
+- Batch allocation.
+- Attendance.
+- Fee collection.
+- Fee discounts.
+- Fee refunds.
+- Examinations.
+- Results.
+- Certificates.
+- Payroll.
+- Expenses.
+- Financial reports.
+- Student documents.
+- Parent information.
+- Branch-level data.
+
+Maintain audit logs for sensitive operations.
+
+# 7. ENQUIRY AND LEAD MANAGEMENT CRM
+
+Build a complete student acquisition CRM.
+
+This is one of the most important modules for coaching businesses.
+
+## 7.1 Enquiry Registration
+
+Fields:
+
+- Enquiry number.
+- Student name.
+- Mobile number.
+- Alternate mobile.
+- Email.
+- Date of birth.
+- Gender.
+- Current qualification.
+- School/college.
+- Course interested in.
+- Preferred branch.
+- Preferred learning mode.
+- Expected joining date.
+- Enquiry source.
+- Counsellor.
+- Notes.
+- Lead status.
+
+## 7.2 Lead Sources
+
+- Website.
+- Google.
+- Instagram.
+- Facebook.
+- WhatsApp.
+- YouTube.
+- Walk-in.
+- Referral.
+- Existing student.
+- Advertisement.
+- Education fair.
+- College seminar.
+- Phone call.
+
+## 7.3 Lead Pipeline
+
+Statuses:
+
+- New Enquiry.
+- Contacted.
+- Interested.
+- Counselling Scheduled.
+- Demo Class Scheduled.
+- Follow-up Required.
+- Fee Discussion.
+- Admission Pending.
+- Converted.
+- Not Interested.
+- Lost.
+
+## 7.4 Follow-up Management
+
+Features:
+
+- Follow-up date.
+- Follow-up time.
+- Assigned counsellor.
+- Call notes.
+- Meeting notes.
+- WhatsApp communication.
+- Next follow-up.
+- Reminder notification.
+
+## 7.5 Counselling Management
+
+Record:
+
+- Student requirements.
+- Career goals.
+- Course recommendations.
+- Previous qualification.
+- Budget.
+- Preferred schedule.
+- Counselling notes.
+- Counsellor remarks.
+
+## 7.6 Demo Class Management
+
+Allow prospects to register for demo classes.
+
+Track:
+
+- Course.
+- Batch.
+- Faculty.
+- Demo date.
+- Attendance.
+- Feedback.
+- Admission conversion.
+
+## 7.7 CRM Analytics
+
+Display:
+
+- Total enquiries.
+- New enquiries today.
+- Enquiries this month.
+- Lead conversion rate.
+- Counsellor performance.
+- Source-wise leads.
+- Branch-wise leads.
+- Course-wise enquiries.
+- Lost leads.
+- Follow-ups overdue.
+
+# 8. ADMISSION MANAGEMENT
+
+Develop a complete admission workflow.
+
+## 8.1 Admission Registration
+
+Fields:
+
+- Admission number.
+- Student ID.
+- Student name.
+- Photograph.
+- Date of birth.
+- Gender.
+- Mobile number.
+- Email.
+- Address.
+- Parent/guardian details.
+- Previous qualification.
+- School/college.
+- Aadhaar information only if genuinely required and handled under applicable data-protection rules.
+- Emergency contact.
+- Admission date.
+- Course.
+- Batch.
+- Branch.
+- Academic session.
+- Admission counsellor.
+- Admission status.
+
+## 8.2 Admission Documents
+
+Allow uploading:
+
+- Photograph.
+- Previous marksheet.
+- Transfer certificate where applicable.
+- Identity proof where required.
+- Address proof where required.
+- Qualification certificate.
+- Other documents.
+
+Fields:
+
+- Document type.
+- Document number.
+- Upload date.
+- Verification status.
+- Verified by.
+- Expiry date where applicable.
+
+## 8.3 Admission Workflow
+
+Enquiry → Counselling → Course Selection → Admission Form → Document Verification → Fee Payment → Student ID Generation → Batch Allocation → Admission Confirmation.
+
+## 8.4 Admission Features
+
+- Online admission.
+- Offline admission.
+- Walk-in admission.
+- Bulk admission.
+- Admission approval.
+- Admission cancellation.
+- Student transfer.
+- Course change.
+- Batch change.
+- Academic session change.
+- Admission receipt.
+- Student ID card.
+
+## 8.5 Admission Number Generation
+
+Generate unique admission numbers automatically.
+
+Example:
+
+WBA-2026-0001
+
+Allow configurable prefixes and financial/academic year formats.
+
+# 9. STUDENT MANAGEMENT
+
+Create a complete student information management system.
+
+## 9.1 Student Profile
+
+Display:
+
+- Student details.
+- Photograph.
+- Admission number.
+- Enrollment number.
+- Course.
+- Batch.
+- Branch.
+- Academic session.
+- Guardian details.
+- Attendance.
+- Fee history.
+- Examination results.
+- Assignments.
+- Study materials.
+- Certificates.
+- Complaints.
+- Communication history.
+- Documents.
+- Placement history.
+
+## 9.2 Student Categories
+
+- Regular.
+- Part-time.
+- Online.
+- Offline.
+- Hybrid.
+- Scholarship.
+- Corporate-sponsored.
+- Government-sponsored.
+- Alumni.
+
+## 9.3 Student Status
+
+- Active.
+- Pending Admission.
+- On Hold.
+- Suspended.
+- Transferred.
+- Course Completed.
+- Dropped Out.
+- Alumni.
+
+## 9.4 Student Operations
+
+- Student promotion.
+- Course transfer.
+- Batch transfer.
+- Branch transfer.
+- Student withdrawal.
+- Re-admission.
+- Student profile editing.
+- Bulk import.
+- Bulk export.
+
+Maintain historical records when students move between batches or courses.
+
+# 10. COURSE AND PROGRAM MANAGEMENT
+
+Build a flexible course management module.
+
+## 10.1 Course Registration
+
+Fields:
+
+- Course ID.
+- Course name.
+- Course code.
+- Category.
+- Description.
+- Course duration.
+- Total classes.
+- Total hours.
+- Course fee.
+- Registration fee.
+- Examination fee.
+- Certification fee.
+- Learning mode.
+- Eligibility.
+- Course coordinator.
+- Certificate type.
+- Status.
+
+## 10.2 Course Categories
+
+Examples:
+
+- Academic Tuition.
+- Competitive Examination.
+- Programming.
+- Web Development.
+- Mobile App Development.
+- Digital Marketing.
+- Artificial Intelligence.
+- Data Science.
+- Computer Fundamentals.
+- Accounting.
+- Spoken English.
+- Graphic Design.
+- Hardware and Networking.
+- Vocational Training.
+- Government Exam Preparation.
+
+Allow administrators to create categories.
+
+## 10.3 Course Structure
+
+A course may contain:
+
+- Modules.
+- Subjects.
+- Chapters.
+- Topics.
+- Lessons.
+- Practical sessions.
+- Projects.
+- Assignments.
+- Assessments.
+- Examinations.
+
+## 10.4 Course Curriculum
+
+Fields:
+
+- Course.
+- Module.
+- Subject.
+- Chapter.
+- Topic.
+- Learning objective.
+- Teaching duration.
+- Learning material.
+- Assignment.
+- Assessment criteria.
+
+## 10.5 Course Types
+
+- One-time course.
+- Monthly course.
+- Semester-based course.
+- Yearly course.
+- Short-term course.
+- Certification course.
+- Weekend course.
+- Online course.
+- Customized corporate course.
+
+# 11. SUBJECT AND SYLLABUS MANAGEMENT
+
+Create a subject master.
+
+Fields:
+
+- Subject name.
+- Subject code.
+- Course.
+- Description.
+- Faculty.
+- Subject duration.
+- Total marks.
+- Passing marks.
+- Practical marks.
+- Theory marks.
+
+Features:
+
+- Subject-course mapping.
+- Subject-batch mapping.
+- Syllabus management.
+- Chapter completion tracking.
+- Faculty assignment.
+- Subject performance reports.
+
+# 12. BATCH MANAGEMENT
+
+Create a complete batch management module.
+
+## 12.1 Batch Creation
+
+Fields:
+
+- Batch name.
+- Batch code.
+- Course.
+- Branch.
+- Academic session.
+- Start date.
+- End date.
+- Batch timing.
+- Days.
+- Maximum students.
+- Faculty.
+- Classroom.
+- Learning mode.
+- Batch status.
+
+## 12.2 Batch Types
+
+- Morning.
+- Afternoon.
+- Evening.
+- Weekend.
+- Online.
+- Offline.
+- Hybrid.
+- Fast Track.
+- Crash Course.
+- Special Batch.
+
+## 12.3 Batch Allocation
+
+Allow:
+
+- Manual student assignment.
+- Automatic assignment.
+- Bulk student allocation.
+- Batch transfer.
+- Batch merging.
+- Batch splitting.
+- Student capacity validation.
+
+## 12.4 Batch Dashboard
+
+Display:
+
+- Total students.
+- Faculty.
+- Attendance percentage.
+- Upcoming classes.
+- Completed syllabus.
+- Pending syllabus.
+- Examination performance.
+- Fee collection.
+- Student progress.
+
+# 13. TIMETABLE AND CLASS SCHEDULING
+
+Develop an interactive timetable.
+
+## 13.1 Class Scheduling
+
+Fields:
+
+- Course.
+- Batch.
+- Subject.
+- Faculty.
+- Classroom.
+- Date.
+- Start time.
+- End time.
+- Class type.
+- Topic.
+- Notes.
+
+## 13.2 Timetable Views
+
+- Daily.
+- Weekly.
+- Monthly.
+- Faculty-wise.
+- Batch-wise.
+- Classroom-wise.
+- Branch-wise.
+
+## 13.3 Conflict Validation
+
+Prevent:
+
+- Faculty overlapping classes.
+- Classroom overlapping bookings.
+- Batch overlapping classes.
+- Invalid class schedules.
+
+Allow authorized overrides with recorded reasons.
+
+## 13.4 Class Status
+
+- Scheduled.
+- Completed.
+- Cancelled.
+- Postponed.
+- Rescheduled.
+
+Track actual classes conducted against planned classes.
+
+# 14. FACULTY AND STAFF MANAGEMENT
+
+## 14.1 Faculty Registration
+
+Fields:
+
+- Faculty ID.
+- Name.
+- Photograph.
+- Mobile.
+- Email.
+- Address.
+- Qualification.
+- Specialization.
+- Experience.
+- Subjects.
+- Courses.
+- Employment type.
+- Joining date.
+- Salary.
+- Per-class payment.
+- Assigned branch.
+- Status.
+
+## 14.2 Faculty Categories
+
+- Full-time.
+- Part-time.
+- Visiting.
+- Contractual.
+- Freelance.
+- Online Instructor.
+
+## 14.3 Faculty Portal
+
+Faculty can:
+
+- Login.
+- View assigned batches.
+- View timetable.
+- Mark attendance.
+- Upload study materials.
+- Add assignments.
+- Create tests.
+- Enter marks.
+- Track syllabus progress.
+- View student performance.
+- Submit leave requests.
+- View payroll statements.
+
+## 14.4 Faculty Performance
+
+Track:
+
+- Classes conducted.
+- Classes cancelled.
+- Student attendance.
+- Syllabus completion.
+- Student examination results.
+- Assignment completion.
+- Student feedback.
+- Faculty workload.
+
+# 15. CLASSROOM AND RESOURCE MANAGEMENT
+
+Manage physical resources.
+
+## 15.1 Classroom Registration
+
+Fields:
+
+- Classroom name.
+- Classroom code.
+- Branch.
+- Floor.
+- Capacity.
+- Seating arrangement.
+- Equipment.
+- Projector availability.
+- Smart board.
+- Computer availability.
+- Status.
+
+## 15.2 Resource Booking
+
+Allow scheduling for:
+
+- Classrooms.
+- Computer labs.
+- Seminar halls.
+- Conference rooms.
+- Practical laboratories.
+- Examination halls.
+
+Prevent double booking of resources.
+
+# 16. STUDENT ATTENDANCE MANAGEMENT
+
+Create a complete attendance module.
+
+## 16.1 Attendance Methods
+
+- Manual attendance.
+- Faculty attendance.
+- QR code attendance.
+- Student portal attendance.
+- Biometric integration.
+- RFID integration.
+- Import from external attendance devices.
+
+Only record attendance through verified or authorized methods.
+
+## 16.2 Attendance Marking
+
+For each class, record:
+
+- Student.
+- Batch.
+- Subject.
+- Faculty.
+- Date.
+- Class schedule.
+- Attendance status.
+- Marked by.
+- Remarks.
+
+Attendance statuses:
+
+- Present.
+- Absent.
+- Late.
+- Half Day.
+- Excused.
+- On Leave.
+
+## 16.3 Attendance Rules
+
+- Attendance should be linked to scheduled classes.
+- Prevent duplicate attendance for the same student and class.
+- Allow corrections with audit history.
+- Lock attendance after a configurable period.
+- Allow authorized correction.
+- Calculate attendance percentage.
+- Generate shortage alerts.
+
+## 16.4 Attendance Reports
+
+- Daily attendance.
+- Monthly attendance.
+- Student-wise attendance.
+- Batch-wise attendance.
+- Subject-wise attendance.
+- Faculty-wise attendance.
+- Attendance shortage.
+- Branch-wise attendance.
+
+# 17. FEE AND PAYMENT MANAGEMENT
+
+This is a critical business module.
+
+## 17.1 Fee Structure
+
+Create configurable fee components:
+
+- Admission Fee.
+- Registration Fee.
+- Tuition Fee.
+- Course Fee.
+- Examination Fee.
+- Laboratory Fee.
+- Study Material Fee.
+- Library Fee.
+- Certification Fee.
+- Transportation Fee.
+- Hostel Fee.
+- Other Charges.
+
+## 17.2 Fee Plans
+
+Support:
+
+- Full payment.
+- Monthly payment.
+- Quarterly payment.
+- Semester payment.
+- Installment payment.
+- Custom payment schedule.
+
+## 17.3 Student Fee Assignment
+
+For each student, generate:
+
+- Total course fee.
+- Discount.
+- Scholarship.
+- Tax where applicable.
+- Net payable.
+- Installment schedule.
+- Paid amount.
+- Outstanding amount.
+- Due dates.
+
+## 17.4 Fee Collection
+
+Fields:
+
+- Receipt number.
+- Student.
+- Admission number.
+- Course.
+- Batch.
+- Fee component.
+- Amount.
+- Discount.
+- Payment date.
+- Payment mode.
+- Transaction reference.
+- Collected by.
+- Remarks.
+
+Payment modes:
+
+- Cash.
+- UPI.
+- Bank Transfer.
+- NEFT.
+- RTGS.
+- Debit Card.
+- Credit Card.
+- Cheque.
+- Payment Gateway.
+
+## 17.5 Fee Status
+
+- Paid.
+- Partially Paid.
+- Pending.
+- Overdue.
+- Waived.
+- Refunded.
+- Cancelled.
+
+## 17.6 Discounts and Scholarships
+
+Support:
+
+- Percentage discount.
+- Fixed discount.
+- Early admission discount.
+- Referral discount.
+- Sibling discount.
+- Merit scholarship.
+- Need-based scholarship.
+- Staff discount.
+- Promotional coupon.
+
+Discounts beyond configured limits must require approval.
+
+## 17.7 Late Fees
+
+Allow configurable:
+
+- Fixed late fee.
+- Daily late fee.
+- Percentage late fee.
+- Grace period.
+- Maximum late fee.
+
+Apply late fees only according to the institute's approved policy.
+
+## 17.8 Fee Refunds
+
+Support:
+
+- Full refund.
+- Partial refund.
+- Course cancellation.
+- Admission cancellation.
+- Duplicate payment refund.
+- Scholarship adjustment.
+
+Maintain refund approval and transaction history.
+
+## 17.9 Automated Fee Reminders
+
+Send reminders for:
+
+- Upcoming installment.
+- Payment due.
+- Overdue payment.
+- Partial payment.
+- Failed payment.
+- Payment receipt.
+
+## 17.10 Fee Dashboard
+
+Display:
+
+- Today's collection.
+- Monthly collection.
+- Total collection.
+- Pending fees.
+- Overdue fees.
+- Branch-wise collection.
+- Course-wise collection.
+- Counsellor-wise admissions.
+- Payment method breakdown.
+- Refunds.
+
+# 18. EXAMINATION MANAGEMENT
+
+Create a complete examination system.
+
+## 18.1 Examination Types
+
+- Unit Test.
+- Weekly Test.
+- Monthly Test.
+- Mid-Term.
+- Final Examination.
+- Mock Test.
+- Online Test.
+- Practical Examination.
+- Viva.
+- Assignment Assessment.
+- Entrance Test.
+- Competitive Examination Mock Test.
+
+## 18.2 Examination Creation
+
+Fields:
+
+- Exam name.
+- Exam code.
+- Course.
+- Batch.
+- Subject.
+- Exam type.
+- Exam date.
+- Start time.
+- End time.
+- Maximum marks.
+- Passing marks.
+- Examination mode.
+- Examination hall.
+- Instructions.
+
+## 18.3 Exam Scheduling
+
+Support:
+
+- Individual exam schedules.
+- Multiple subject exams.
+- Exam timetable.
+- Hall allocation.
+- Faculty/invigilator assignment.
+- Student eligibility.
+
+## 18.4 Question Bank
+
+Create a reusable question bank.
+
+Question types:
+
+- Multiple Choice.
+- Multiple Select.
+- True/False.
+- Fill in the Blank.
+- Short Answer.
+- Long Answer.
+- Descriptive.
+- Matching.
+- Numerical.
+- Coding Question.
+- Image-based Question.
+
+Question fields:
+
+- Question.
+- Subject.
+- Topic.
+- Difficulty.
+- Marks.
+- Negative marks.
+- Explanation.
+- Options.
+- Correct answer.
+- Question image.
+- Attachment.
+
+## 18.5 Online Examination
+
+Features:
+
+- Randomized questions.
+- Randomized options.
+- Configurable duration.
+- Countdown timer.
+- Automatic submission.
+- Attempt restrictions.
+- Question navigation.
+- Mark for review.
+- Auto-save answers.
+- Result calculation.
+- Objective auto-evaluation.
+- Manual evaluation for descriptive answers.
+
+Use server-side timing validation and secure attempt tracking.
+
+Do not rely only on browser timers to enforce examination duration.
+
+## 18.6 Offline Examination
+
+Support:
+
+- Printed question papers.
+- Attendance sheet.
+- Answer sheet entry.
+- Manual marks entry.
+- Evaluator assignment.
+- Marks verification.
+
+# 19. RESULTS AND GRADING MANAGEMENT
+
+## 19.1 Marks Entry
+
+Record:
+
+- Student.
+- Examination.
+- Subject.
+- Theory marks.
+- Practical marks.
+- Assignment marks.
+- Internal marks.
+- Total marks.
+- Maximum marks.
+- Percentage.
+- Grade.
+- Result status.
+
+## 19.2 Grading System
+
+Configurable grading:
+
+- Percentage-based.
+- Grade-based.
+- GPA-based.
+- Pass/Fail.
+- Rank-based.
+
+Allow different grading structures for different courses.
+
+## 19.3 Result Processing
+
+Automatically calculate:
+
+- Total marks.
+- Percentage.
+- Grade.
+- Subject-wise performance.
+- Overall result.
+- Rank where applicable.
+- Pass/fail status.
+
+Support result verification and publication approval.
+
+## 19.4 Result Dashboard
+
+- Batch topper.
+- Course topper.
+- Subject topper.
+- Average marks.
+- Pass percentage.
+- Fail percentage.
+- Student improvement.
+- Subject performance.
+- Branch performance.
+
+## 19.5 Report Cards
+
+Generate PDF report cards containing:
+
+- Institute details.
+- Student information.
+- Course.
+- Batch.
+- Examination.
+- Subject-wise marks.
+- Total marks.
+- Percentage.
+- Grade.
+- Rank where applicable.
+- Attendance percentage.
+- Faculty remarks.
+- Result status.
+
+# 20. ASSIGNMENT AND HOMEWORK MANAGEMENT
+
+Create a complete assignment module.
+
+## 20.1 Assignment Creation
+
+Fields:
+
+- Assignment title.
+- Course.
+- Batch.
+- Subject.
+- Faculty.
+- Description.
+- Instructions.
+- Attachment.
+- Assigned date.
+- Due date.
+- Maximum marks.
+- Submission type.
+
+## 20.2 Submission Types
+
+- Text.
+- PDF.
+- Image.
+- Document.
+- ZIP.
+- Source code.
+- Link.
+- Multiple attachments.
+
+## 20.3 Student Submission
+
+Students can:
+
+- View assignments.
+- Download materials.
+- Submit work.
+- Upload files.
+- Add comments.
+- Track submission status.
+- Resubmit when permitted.
+
+## 20.4 Faculty Evaluation
+
+Faculty can:
+
+- Review submissions.
+- Add remarks.
+- Award marks.
+- Upload feedback.
+- Request resubmission.
+- Mark completed.
+
+## 20.5 Assignment Reports
+
+- Assigned.
+- Submitted.
+- Pending.
+- Late.
+- Evaluated.
+- Student-wise completion.
+
+# 21. STUDY MATERIAL AND CONTENT MANAGEMENT
+
+Build a centralized learning resource library.
+
+## 21.1 Material Types
+
+- PDF Notes.
+- Documents.
+- Presentations.
+- Videos.
+- Audio.
+- Images.
+- E-books.
+- Practice Papers.
+- Question Banks.
+- Source Code.
+- External Links.
+
+## 21.2 Content Organization
+
+Course → Module → Subject → Chapter → Topic → Learning Material.
+
+## 21.3 Access Controls
+
+Materials can be assigned to:
+
+- All students.
+- Specific courses.
+- Specific batches.
+- Selected students.
+- Faculty.
+- Public visitors.
+
+## 21.4 Content Tracking
+
+Track:
+
+- Material views.
+- Downloads.
+- Completion.
+- Student feedback.
+
+Provide optional download restrictions, watermarking, and signed URLs where appropriate.
+
+# 22. ONLINE CLASS MANAGEMENT
+
+Support live online education.
+
+## 22.1 Online Class Scheduling
+
+Fields:
+
+- Course.
+- Batch.
+- Subject.
+- Faculty.
+- Date.
+- Start time.
+- End time.
+- Platform.
+- Meeting link.
+- Password where applicable.
+- Recording link.
+- Instructions.
+
+## 22.2 Integration Options
+
+Prepare integrations for:
+
+- Zoom.
+- Google Meet.
+- Microsoft Teams.
+- Jitsi.
+- Other supported video conferencing services.
+
+## 22.3 Online Class Features
+
+- Class reminders.
+- Join class.
+- Attendance.
+- Recording links.
+- Session materials.
+- Class feedback.
+- Faculty notes.
+
+Do not claim live video functionality is implemented unless an actual provider integration is configured and tested.
+
+# 23. LEARNING MANAGEMENT SYSTEM (LMS)
+
+Create an integrated LMS.
+
+## 23.1 LMS Course Structure
+
+Course → Module → Lesson → Topic → Quiz → Assignment.
+
+## 23.2 Lesson Types
+
+- Video Lesson.
+- Text Lesson.
+- PDF Lesson.
+- Presentation.
+- Interactive Lesson.
+- Coding Exercise.
+- Quiz.
+- Practical Exercise.
+
+## 23.3 Student Learning Dashboard
+
+Display:
+
+- Enrolled courses.
+- Course progress.
+- Completed lessons.
+- Pending lessons.
+- Assignments.
+- Upcoming tests.
+- Exam results.
+- Certificates.
+- Learning streak.
+- Recent activity.
+
+## 23.4 Course Progress
+
+Track:
+
+- Lesson started.
+- Lesson completed.
+- Video progress where technically supported.
+- Quiz completion.
+- Assignment completion.
+- Module completion.
+- Course completion.
+
+## 23.5 Course Completion Rules
+
+Allow configurable completion requirements:
+
+- Minimum lesson completion.
+- Minimum attendance.
+- Assignment completion.
+- Minimum examination marks.
+- Project submission.
+- Faculty approval.
+
+# 24. CERTIFICATE MANAGEMENT
+
+Create a professional certificate generation module.
+
+## 24.1 Certificate Types
+
+- Course Completion Certificate.
+- Participation Certificate.
+- Internship Certificate.
+- Training Certificate.
+- Excellence Certificate.
+- Workshop Certificate.
+- Faculty Certificate.
+
+## 24.2 Certificate Templates
+
+Allow administrators to:
+
+- Upload backgrounds.
+- Configure logos.
+- Set signatures.
+- Add authorized signatories.
+- Position dynamic fields.
+- Set certificate numbering.
+- Configure issue date.
+
+## 24.3 Certificate Generation
+
+Automatically generate certificates using:
+
+- Student name.
+- Course name.
+- Duration.
+- Completion date.
+- Certificate ID.
+- Institute name.
+- Authorized signature.
+
+## 24.4 Certificate Verification
+
+Provide a public verification page.
+
+Students and employers can enter certificate ID or scan a QR code.
+
+Show only appropriate certificate verification details.
+
+# 25. STUDENT PORTAL
+
+Develop a responsive student portal.
+
+Students can:
+
+- Login.
+- View profile.
+- View admission details.
+- View course.
+- View batch.
+- View timetable.
+- View attendance.
+- View fee dues.
+- Pay fees.
+- Download receipts.
+- Download study materials.
+- Attend online classes.
+- Submit assignments.
+- Take online exams.
+- View results.
+- Download report cards.
+- Download certificates.
+- Submit complaints.
+- Request leave.
+- Receive announcements.
+- Update permitted profile details.
+
+Students must only access their own information.
+
+# 26. PARENT/GUARDIAN PORTAL
+
+Develop a dedicated parent portal.
+
+Parents can:
+
+- Login.
+- View linked children.
+- View student profile.
+- Track attendance.
+- View examination results.
+- View assignments.
+- View timetable.
+- View fee status.
+- Pay fees.
+- Download receipts.
+- Receive notifications.
+- View announcements.
+- Contact the institute.
+- Submit feedback.
+
+Allow one parent account to link multiple students with proper authorization.
+
+# 27. LIBRARY MANAGEMENT
+
+Create an integrated library system.
+
+## 27.1 Book Management
+
+Fields:
+
+- Book title.
+- ISBN.
+- Author.
+- Publisher.
+- Category.
+- Edition.
+- Quantity.
+- Available copies.
+- Shelf number.
+- Purchase price.
+- Book status.
+
+## 27.2 Library Operations
+
+- Book issue.
+- Book return.
+- Book reservation.
+- Renewal.
+- Fine calculation.
+- Lost book management.
+- Student library membership.
+- Faculty membership.
+
+## 27.3 Library Reports
+
+- Available books.
+- Issued books.
+- Overdue books.
+- Fine collection.
+- Most issued books.
+- Student borrowing history.
+
+# 28. TRANSPORT MANAGEMENT
+
+Make this module optional.
+
+Features:
+
+- Vehicle registration.
+- Driver allocation.
+- Route management.
+- Pickup points.
+- Student allocation.
+- Transport fees.
+- Monthly transport billing.
+- Vehicle maintenance.
+- Transport attendance.
+- Route-wise reports.
+
+# 29. HOSTEL MANAGEMENT
+
+Make this module optional.
+
+Features:
+
+- Hostel registration.
+- Building management.
+- Room management.
+- Bed allocation.
+- Student admission.
+- Hostel fee.
+- Mess management.
+- Visitor register.
+- Complaints.
+- Hostel attendance.
+- Maintenance.
+- Room vacancy.
+
+# 30. HR AND PAYROLL MANAGEMENT
+
+## 30.1 Employee Management
+
+Fields:
+
+- Employee ID.
+- Name.
+- Photograph.
+- Department.
+- Designation.
+- Contact.
+- Address.
+- Qualification.
+- Joining date.
+- Employment type.
+- Salary.
+- Branch.
+- Documents.
+- Status.
+
+## 30.2 Attendance
+
+- Employee attendance.
+- Faculty attendance.
+- Check-in.
+- Check-out.
+- Leave.
+- Late arrival.
+- Overtime.
+- Monthly attendance.
+
+## 30.3 Leave Management
+
+- Leave application.
+- Leave type.
+- Leave balance.
+- Approval workflow.
+- Leave history.
+
+## 30.4 Payroll
+
+Support:
+
+- Fixed salary.
+- Per-class payment.
+- Per-hour payment.
+- Commission.
+- Allowances.
+- Bonuses.
+- Deductions.
+- Advances.
+- Salary slips.
+- Payroll approval.
+
+## 30.5 Faculty Payment Models
+
+Support different faculty compensation models:
+
+- Monthly salary.
+- Per lecture.
+- Per hour.
+- Per student.
+- Revenue sharing.
+- Fixed contract.
+
+# 31. PLACEMENT AND INTERNSHIP MANAGEMENT
+
+Particularly useful for professional training and skill development academies.
+
+## 31.1 Student Career Profile
+
+- Skills.
+- Qualification.
+- Projects.
+- Resume.
+- Portfolio.
+- Internship history.
+- Placement status.
+- Interview history.
+
+## 31.2 Employer Management
+
+- Company.
+- Industry.
+- Contact person.
+- Email.
+- Phone.
+- Location.
+- Job openings.
+- Internship openings.
+
+## 31.3 Placement Operations
+
+- Job posting.
+- Student eligibility.
+- Application.
+- Shortlisting.
+- Interview scheduling.
+- Interview feedback.
+- Offer letter.
+- Joining confirmation.
+- Placement tracking.
+
+## 31.4 Placement Reports
+
+- Students trained.
+- Students placed.
+- Placement percentage.
+- Employer-wise placements.
+- Course-wise placement.
+- Salary package.
+- Internship conversion.
+
+# 32. ANNOUNCEMENTS AND COMMUNICATION
+
+Create a centralized communication module.
+
+## 32.1 Announcements
+
+Allow announcements for:
+
+- All students.
+- Specific course.
+- Specific batch.
+- Specific branch.
+- Faculty.
+- Parents.
+- Employees.
+
+## 32.2 Notification Channels
+
+- In-app notifications.
+- Email.
+- SMS.
+- WhatsApp Business API.
+- Push notifications through an integrated mobile application.
+
+## 32.3 Notification Events
+
+- Admission confirmation.
+- Fee reminder.
+- Fee receipt.
+- Attendance shortage.
+- Class cancellation.
+- Timetable change.
+- Examination announcement.
+- Assignment deadline.
+- Result publication.
+- Certificate issued.
+- Parent meeting.
+- Placement opportunity.
+
+Maintain communication delivery logs.
+
+# 33. WEBSITE AND ONLINE ADMISSION
+
+Create an integrated public website.
+
+## 33.1 Public Website Pages
+
+- Home.
+- About Institute.
+- Courses.
+- Course Details.
+- Faculty.
+- Branches.
+- Admissions.
+- Online Application.
+- Fee Structure.
+- Student Results.
+- Certificate Verification.
+- Placement.
+- Testimonials.
+- Events.
+- Contact.
+- Student Login.
+
+## 33.2 Online Admission
+
+Allow prospects to:
+
+1. Browse courses.
+2. View course details.
+3. Submit an enquiry.
+4. Register an account.
+5. Complete admission form.
+6. Upload documents.
+7. Select a branch.
+8. Select a course.
+9. Submit an application.
+10. Pay applicable fees.
+11. Track admission status.
+
+# 34. EVENTS AND SEMINAR MANAGEMENT
+
+Support:
+
+- Workshops.
+- Seminars.
+- Webinars.
+- Guest lectures.
+- Career counselling.
+- Campus drives.
+- Educational fairs.
+- Competitions.
+
+Features:
+
+- Event creation.
+- Registration.
+- Attendance.
+- Guest management.
+- Certificates.
+- Event expenses.
+- Feedback.
+- Event reports.
+
+# 35. FINANCIAL MANAGEMENT AND ACCOUNTING
+
+Build a proper financial management module.
+
+## 35.1 Income Categories
+
+- Admission Fees.
+- Tuition Fees.
+- Course Fees.
+- Examination Fees.
+- Certification Fees.
+- Library Fees.
+- Hostel Fees.
+- Transport Fees.
+- Workshop Fees.
+- Other Income.
+
+## 35.2 Expense Categories
+
+- Faculty Salary.
+- Employee Salary.
+- Office Rent.
+- Electricity.
+- Internet.
+- Marketing.
+- Software.
+- Hardware.
+- Classroom Equipment.
+- Study Material.
+- Maintenance.
+- Transport.
+- Hostel.
+- Administrative Expenses.
+
+## 35.3 Accounting Features
+
+- Chart of Accounts.
+- Journal Entries.
+- General Ledger.
+- Cash Book.
+- Bank Book.
+- Customer/Student Ledger.
+- Supplier Ledger.
+- Accounts Receivable.
+- Accounts Payable.
+- Trial Balance.
+- Profit and Loss.
+- Balance Sheet.
+- Cash Flow.
+- Bank Reconciliation.
+
+Use double-entry accounting.
+
+## 35.4 Fee Accounting
+
+Separate:
+
+- Fee billed.
+- Fee collected.
+- Fee outstanding.
+- Fee refunded.
+- Fee waived.
+- Scholarship.
+- Advance payment.
+
+Every payment must be traceable to its original fee allocation.
+
+Do not count an advance payment as earned revenue automatically without applying the institute's accounting policy.
+
+# 36. DASHBOARD AND ANALYTICS
+
+Create role-specific dashboards.
+
+## 36.1 Owner Dashboard
+
+Display:
+
+- Total students.
+- Active students.
+- New admissions.
+- Total enquiries.
+- Lead conversion.
+- Total courses.
+- Active batches.
+- Faculty count.
+- Today's attendance.
+- Today's fee collection.
+- Monthly revenue.
+- Monthly expenses.
+- Outstanding fees.
+- Branch performance.
+- Course performance.
+- Student retention.
+- Placement performance.
+
+## 36.2 Admission Dashboard
+
+- New leads.
+- Follow-ups due.
+- Counselling appointments.
+- Demo classes.
+- Converted leads.
+- Pending admissions.
+- Counsellor performance.
+- Lead source conversion.
+
+## 36.3 Academic Dashboard
+
+- Active batches.
+- Today's classes.
+- Faculty availability.
+- Attendance percentage.
+- Syllabus completion.
+- Upcoming examinations.
+- Pending assignments.
+- Academic performance.
+
+## 36.4 Faculty Dashboard
+
+- Assigned batches.
+- Today's timetable.
+- Classes completed.
+- Attendance pending.
+- Assignments pending evaluation.
+- Upcoming examinations.
+- Student performance.
+
+## 36.5 Accountant Dashboard
+
+- Today's collection.
+- Monthly collection.
+- Pending fees.
+- Overdue fees.
+- Refunds.
+- Expenses.
+- Outstanding receivables.
+- Branch-wise collection.
+
+## 36.6 Student Dashboard
+
+- My courses.
+- My batch.
+- My attendance.
+- Upcoming classes.
+- Assignments.
+- Exams.
+- Results.
+- Fee dues.
+- Study materials.
+- Course progress.
+
+All dashboards must use actual database records.
+
+# 37. REPORTS AND ANALYTICS
+
+Create a comprehensive reporting system.
+
+## 37.1 Admission Reports
+
+1. Enquiry Register.
+2. Daily Enquiry Report.
+3. Monthly Enquiry Report.
+4. Admission Register.
+5. Admission Conversion.
+6. Counsellor Performance.
+7. Source-wise Admission.
+8. Course-wise Admission.
+9. Branch-wise Admission.
+10. Cancelled Admission.
+
+## 37.2 Student Reports
+
+1. Student Register.
+2. Active Students.
+3. Inactive Students.
+4. Course-wise Students.
+5. Batch-wise Students.
+6. Student Transfer.
+7. Student Dropout.
+8. Student Progress.
+9. Alumni Register.
+
+## 37.3 Academic Reports
+
+1. Timetable.
+2. Faculty Workload.
+3. Classes Conducted.
+4. Syllabus Completion.
+5. Student Attendance.
+6. Batch Attendance.
+7. Subject Performance.
+8. Examination Results.
+9. Assignment Completion.
+10. Course Completion.
+
+## 37.4 Fee Reports
+
+1. Fee Collection Register.
+2. Outstanding Fee.
+3. Overdue Fee.
+4. Student Ledger.
+5. Installment Report.
+6. Discount Report.
+7. Scholarship Report.
+8. Refund Report.
+9. Branch-wise Collection.
+10. Course-wise Collection.
+
+## 37.5 HR Reports
+
+1. Employee Register.
+2. Faculty Register.
+3. Attendance.
+4. Leave.
+5. Payroll.
+6. Faculty Payment.
+7. Workload.
+
+## 37.6 Financial Reports
+
+1. Income.
+2. Expenses.
+3. Profit and Loss.
+4. Balance Sheet.
+5. Cash Flow.
+6. Trial Balance.
+7. General Ledger.
+8. Bank Reconciliation.
+
+Support filters, PDF, Excel, and CSV exports.
+
+# 38. AUTOMATION AND SCHEDULED TASKS
+
+Implement Laravel scheduled jobs and queues.
+
+Automate:
+
+- Fee reminders.
+- Attendance shortage alerts.
+- Upcoming examination reminders.
+- Assignment deadlines.
+- Class reminders.
+- Admission follow-ups.
+- Course completion notifications.
+- Certificate generation.
+- Birthday notifications where enabled.
+- Parent communication.
+- Employee leave reminders.
+- Payroll processing reminders.
+
+All automation must be configurable.
+
+# 39. OPTIONAL AI FEATURES
+
+Design an integration-ready AI layer. AI features must not replace verified academic or financial records.
+
+Potential features:
+
+1. AI Admission Chatbot.
+2. Course Recommendation Assistant.
+3. Automated Enquiry Classification.
+4. Lead Follow-up Suggestions.
+5. AI Quiz Generation.
+6. Question Paper Generation.
+7. Study Material Summarization.
+8. Student Performance Insights.
+9. Attendance Risk Alerts.
+10. Personalized Learning Recommendations.
+11. AI Student Support Assistant.
+12. Automated FAQ Assistant.
+
+Require human review for examination papers, grades, admission decisions, and important student evaluations.
+
+# 40. DATABASE ARCHITECTURE
+
+Design a normalized MySQL schema.
+
+Use:
+
+- Foreign keys.
+- Proper indexes.
+- Unique constraints.
+- Decimal precision.
+- Timestamps.
+- Soft deletes where appropriate.
+- Audit history.
+- Company and branch ownership.
+
+## 40.1 Company and System Tables
+
+- companies
+- institutes
+- branches
+- departments
+- users
+- roles
+- permissions
+- role_permissions
+- user_roles
+- academic_sessions
+- system_settings
+- activity_logs
+- audit_logs
+
+## 40.2 Lead and Admission Tables
+
+- enquiries
+- enquiry_sources
+- enquiry_followups
+- counselling_sessions
+- demo_classes
+- demo_class_attendance
+- admission_applications
+- admissions
+- admission_documents
+- admission_status_history
+
+## 40.3 Student Tables
+
+- students
+- student_addresses
+- student_guardians
+- student_documents
+- student_contacts
+- student_status_history
+- student_transfers
+- student_notes
+
+## 40.4 Course Tables
+
+- course_categories
+- courses
+- course_modules
+- course_subjects
+- subjects
+- chapters
+- topics
+- lessons
+- course_prerequisites
+- course_fee_structures
+- course_completion_rules
+
+## 40.5 Batch Tables
+
+- batches
+- batch_students
+- batch_faculty
+- batch_subjects
+- batch_schedules
+- class_sessions
+- classroom_allocations
+
+## 40.6 Faculty and Employee Tables
+
+- employees
+- faculty_profiles
+- faculty_subjects
+- employee_documents
+- employee_attendance
+- employee_leaves
+- employee_payroll
+- faculty_payments
+
+## 40.7 Attendance Tables
+
+- student_attendance
+- attendance_sessions
+- attendance_corrections
+- attendance_devices
+- attendance_device_logs
+
+## 40.8 Fee Tables
+
+- fee_categories
+- fee_structures
+- student_fee_assignments
+- fee_installments
+- fee_invoices
+- fee_invoice_items
+- fee_payments
+- payment_allocations
+- fee_discounts
+- scholarships
+- fee_refunds
+- fee_waivers
+- late_fee_rules
+
+## 40.9 Examination Tables
+
+- examinations
+- exam_schedules
+- exam_subjects
+- exam_rooms
+- exam_invigilators
+- question_banks
+- questions
+- question_options
+- exam_attempts
+- exam_attempt_answers
+- exam_submissions
+- exam_marks
+- result_publications
+- report_cards
+- grading_scales
+
+## 40.10 Assignment and LMS Tables
+
+- assignments
+- assignment_attachments
+- assignment_submissions
+- assignment_evaluations
+- study_materials
+- material_access
+- online_classes
+- online_class_attendance
+- learning_modules
+- learning_lessons
+- lesson_progress
+- quizzes
+- quiz_questions
+- quiz_attempts
+- course_progress
+
+## 40.11 Certificate Tables
+
+- certificate_templates
+- certificates
+- certificate_signatories
+- certificate_verification_logs
+
+## 40.12 Library Tables
+
+- library_books
+- library_categories
+- library_copies
+- library_issues
+- library_returns
+- library_reservations
+- library_fines
+
+## 40.13 Transport and Hostel Tables
+
+- transport_vehicles
+- transport_routes
+- transport_stops
+- student_transport_allocations
+- hostels
+- hostel_rooms
+- hostel_beds
+- hostel_allocations
+- hostel_payments
+
+## 40.14 Placement Tables
+
+- employers
+- job_openings
+- internships
+- student_applications
+- placement_interviews
+- placement_offers
+- student_placements
+
+## 40.15 Finance Tables
+
+- chart_of_accounts
+- journal_entries
+- journal_entry_lines
+- expenses
+- expense_categories
+- suppliers
+- cash_accounts
+- bank_accounts
+- bank_transactions
+- accounting_periods
+- bank_reconciliations
+
+## 40.16 Notification Tables
+
+- announcements
+- notifications
+- notification_templates
+- communication_logs
+- notification_preferences
+
+## 40.17 Website and Integration Tables
+
+- website_pages
+- website_banners
+- website_testimonials
+- website_faqs
+- payment_gateway_transactions
+- api_tokens
+- webhook_logs
+- integration_settings
+
+Add other tables and junction tables wherever required.
+
+Document all relationships in DATABASE_SCHEMA.md and ER_DIAGRAM.md.
+
+# 41. IMPORTANT BUSINESS RULES
+
+Implement these rules strictly.
+
+## Admission
+
+- Every admission must have a unique admission number.
+- Every student must have a valid enrollment record.
+- Course and branch must be valid.
+- Admission history must be maintained.
+- Duplicate student detection must be available.
+- Admission cancellation must preserve financial history.
+
+## Course and Batch
+
+- Batch must belong to a valid course and branch.
+- Students cannot be allocated beyond batch capacity without authorization.
+- Faculty must be assigned to eligible subjects.
+- Class schedules must not conflict.
+- Historical batch allocation must be preserved.
+
+## Attendance
+
+- Attendance must be linked to a valid class session.
+- Duplicate attendance must be prevented.
+- Attendance corrections must be auditable.
+- Attendance percentage must be calculated correctly.
+- Only authorized roles can modify locked attendance.
+
+## Fees
+
+- Every student fee assignment must be linked to an admission or approved enrollment.
+- Installments must have due dates.
+- Partial payments must be supported.
+- Payment allocations must not exceed the available unallocated amount.
+- Refunds must reference original payments.
+- Discounts must follow approval limits.
+- Receipt numbers must be unique.
+
+## Examinations
+
+- Students must satisfy configured eligibility rules.
+- Exam attempts must follow configured attempt limits.
+- Answers must be saved reliably.
+- Objective marks must be calculated consistently.
+- Descriptive marks must support manual evaluation.
+- Published results must not be silently modified.
+- Result corrections must be auditable.
+
+## Certificates
+
+- Certificates must only be issued after configured completion requirements.
+- Certificate IDs must be unique.
+- Revoked certificates must remain verifiable as revoked.
+
+## Finance
+
+- All journal entries must balance.
+- Posted entries must not be silently edited.
+- Corrections must use reversals.
+- Fee collection, refunds, scholarships, and expenses must be traceable.
+
+# 42. UI/UX DESIGN REQUIREMENTS
+
+Create a premium, modern educational ERP interface.
+
+Design inspiration:
+
+- Modern SaaS dashboards.
+- Zoho.
+- Odoo.
+- Modern LMS platforms.
+
+Use:
+
+- Clean white backgrounds.
+- Light gray content surfaces.
+- Professional typography.
+- Consistent spacing.
+- Responsive tables.
+- Searchable dropdowns.
+- Interactive calendars.
+- Clear status indicators.
+- Modern charts.
+- Professional icons.
+- Responsive layouts.
+
+Avoid:
+
+- Overly decorative interfaces.
+- Unnecessary animations.
+- Too many colors.
+- Outdated admin templates.
+- Crowded dashboards.
+
+## Required Screens
+
+1. Login.
+2. Owner Dashboard.
+3. Admission Dashboard.
+4. Enquiry List.
+5. Enquiry Details.
+6. Counselling Schedule.
+7. Demo Class Management.
+8. Admission Form.
+9. Student List.
+10. Student Profile.
+11. Course List.
+12. Course Details.
+13. Subject Management.
+14. Syllabus Management.
+15. Batch List.
+16. Batch Details.
+17. Batch Allocation.
+18. Timetable.
+19. Faculty List.
+20. Faculty Profile.
+21. Classroom Management.
+22. Attendance.
+23. Attendance Reports.
+24. Fee Structure.
+25. Fee Collection.
+26. Student Fee Ledger.
+27. Outstanding Fees.
+28. Examination Management.
+29. Question Bank.
+30. Online Exam.
+31. Marks Entry.
+32. Results.
+33. Report Card.
+34. Assignment Management.
+35. Study Materials.
+36. Online Classes.
+37. LMS Course Player.
+38. Certificate Management.
+39. Certificate Verification.
+40. Parent Portal.
+41. Student Portal.
+42. Faculty Portal.
+43. Library.
+44. Transport.
+45. Hostel.
+46. Placement.
+47. HR.
+48. Payroll.
+49. Expenses.
+50. Accounting.
+51. Reports.
+52. Company Settings.
+53. Branch Settings.
+54. User Management.
+55. Role Management.
+
+Every screen must have actual working database integration.
+
+# 43. SECURITY REQUIREMENTS
+
+Implement:
+
+- Secure authentication.
+- Password hashing.
+- CSRF protection.
+- SQL injection protection.
+- XSS protection.
+- Server-side validation.
+- Role-based access.
+- Branch-level access.
+- Tenant-level isolation.
+- Secure file uploads.
+- Document access controls.
+- API authentication.
+- Rate limiting.
+- Session security.
+- Audit logs.
+- Secure student data storage.
+
+Treat student and parent information as confidential.
+
+Do not expose student marks, attendance, contact details, or documents publicly.
+
+# 44. PERFORMANCE AND SCALABILITY
+
+Implement:
+
+- Database indexing.
+- Pagination.
+- Eager loading.
+- Query optimization.
+- Laravel queues.
+- Scheduled jobs.
+- Redis caching where available.
+- Background PDF generation.
+- Background Excel exports.
+- Optimized examination submission.
+- Database backups.
+- Error monitoring.
+
+Support growth from a small coaching center to a multi-branch institute.
+
+# 45. DEMO DATA
+
+Create a sample institute.
+
+Institute Name: Kalpkrut Pathshala.
+
+Generate:
+
+- 1 company.
+- 2 institutes or centers.
+- 3 branches.
+- 10 courses.
+- 30 subjects.
+- 20 batches.
+- 100 students.
+- 15 faculty members.
+- 5 counsellors.
+- 10 classrooms.
+- 100 admissions/enquiries combined.
+- 100 attendance records.
+- 50 fee invoices.
+- 50 fee payments.
+- 10 examinations.
+- 100 exam marks.
+- 20 assignments.
+- 30 study materials.
+- 10 certificates.
+- 10 expenses.
+
+Include examples of:
+
+- Digital Marketing.
+- Web Development.
+- Flutter App Development.
+- Artificial Intelligence.
+- Python.
+- Computer Fundamentals.
+- Spoken English.
+- School Tuition.
+- Competitive Examination Coaching.
+- Accounting.
+
+Ensure demo records are relationally consistent.
+
+# 46. TESTING REQUIREMENTS
+
+Use PHPUnit or Pest.
+
+## Unit Tests
+
+Test:
+
+- Admission number generation.
+- Course fee calculation.
+- Installment calculation.
+- Discount calculation.
+- Late fee calculation.
+- Payment allocation.
+- Refund calculation.
+- Attendance percentage.
+- Examination marks.
+- Percentage and grade calculation.
+- Course completion.
+- Certificate eligibility.
+- Payroll calculation.
+
+## Feature Tests
+
+Test:
+
+- Student registration.
+- Enquiry creation.
+- Lead conversion.
+- Admission creation.
+- Course creation.
+- Batch creation.
+- Student allocation.
+- Faculty assignment.
+- Timetable conflict.
+- Attendance marking.
+- Fee collection.
+- Payment receipt generation.
+- Fee refund.
+- Exam creation.
+- Online exam submission.
+- Marks entry.
+- Result publication.
+- Assignment submission.
+- Certificate generation.
+- Parent portal permissions.
+- Student portal permissions.
+- Accounting entries.
+
+## End-to-End Test
+
+Simulate the entire student lifecycle:
+
+1. Create an enquiry.
+2. Assign a counsellor.
+3. Schedule follow-up.
+4. Conduct counselling.
+5. Schedule demo class.
+6. Mark demo attendance.
+7. Convert lead into admission.
+8. Create student profile.
+9. Upload admission documents.
+10. Select course.
+11. Allocate batch.
+12. Assign faculty.
+13. Generate fee schedule.
+14. Collect admission fee.
+15. Generate payment receipt.
+16. Publish timetable.
+17. Mark attendance.
+18. Upload study materials.
+19. Assign homework.
+20. Submit assignment.
+21. Create examination.
+22. Conduct examination.
+23. Enter marks.
+24. Publish result.
+25. Track course completion.
+26. Generate certificate.
+27. Generate student academic report.
+
+Verify the student, academic, and financial records throughout the process.
+
+# 47. DOCUMENTATION REQUIREMENTS
+
+Create and maintain:
+
+1. PROJECT_PLAN.md
+2. DATABASE_SCHEMA.md
+3. ER_DIAGRAM.md
+4. MODULE_STATUS.md
+5. DEVELOPMENT_LOG.md
+6. BUSINESS_RULES.md
+7. API_DOCUMENTATION.md
+8. TESTING_CHECKLIST.md
+9. INSTALLATION_GUIDE.md
+10. DEPLOYMENT_GUIDE.md
+11. ADMIN_USER_MANUAL.md
+12. FACULTY_USER_MANUAL.md
+13. STUDENT_USER_MANUAL.md
+
+Update documentation as development progresses.
+
+# 48. DEVELOPMENT PHASES
+
+## Phase 1: Foundation
+
+- Laravel setup.
+- MySQL setup.
+- Authentication.
+- Company management.
+- Institute management.
+- Branch management.
+- User management.
+- Roles and permissions.
+- Dashboard layout.
+
+## Phase 2: Student Acquisition
+
+- Enquiry CRM.
+- Follow-ups.
+- Counselling.
+- Demo classes.
+- Admission management.
+- Student registration.
+- Student profile.
+
+## Phase 3: Academic Master Data
+
+- Courses.
+- Subjects.
+- Syllabus.
+- Academic sessions.
+- Batches.
+- Faculty.
+- Classroom management.
+
+## Phase 4: Academic Operations
+
+- Timetable.
+- Class scheduling.
+- Student allocation.
+- Faculty assignment.
+- Attendance.
+- Academic calendar.
+
+## Phase 5: Fee Management
+
+- Fee structures.
+- Installments.
+- Fee collection.
+- Discounts.
+- Scholarships.
+- Refunds.
+- Payment receipts.
+- Outstanding reports.
+
+## Phase 6: Examinations
+
+- Question bank.
+- Exam scheduling.
+- Online examination.
+- Offline examination.
+- Marks entry.
+- Grading.
+- Results.
+- Report cards.
+
+## Phase 7: Learning Management
+
+- Assignments.
+- Study materials.
+- Online classes.
+- LMS.
+- Student progress.
+- Course completion.
+
+## Phase 8: Portals
+
+- Student portal.
+- Parent portal.
+- Faculty portal.
+
+## Phase 9: Certificates and Placement
+
+- Certificate templates.
+- Certificate generation.
+- Verification.
+- Internship management.
+- Placement management.
+
+## Phase 10: Administration
+
+- Library.
+- Transport.
+- Hostel.
+- HR.
+- Payroll.
+- Events.
+
+## Phase 11: Finance and Analytics
+
+- Expenses.
+- Accounting.
+- Financial reports.
+- Branch analytics.
+- Academic analytics.
+- Business intelligence.
+
+## Phase 12: Integrations and Automation
+
+- Payment gateways.
+- WhatsApp.
+- SMS.
+- Email.
+- Online meeting platforms.
+- AI integrations.
+- APIs.
+- Scheduled notifications.
+
+## Phase 13: Testing and Deployment
+
+- Unit tests.
+- Feature tests.
+- End-to-end tests.
+- Security testing.
+- Performance testing.
+- Production deployment.
+- Backup configuration.
+- Documentation.
+
+# 49. STRICT DEVELOPMENT INSTRUCTIONS
+
+1. Inspect the existing codebase before starting.
+2. Do not overwrite existing functionality without understanding dependencies.
+3. Design the database before implementing dependent modules.
+4. Use migrations and seeders.
+5. Follow Laravel conventions.
+6. Use reusable services and components.
+7. Implement server-side validation.
+8. Implement proper role permissions.
+9. Every button must perform a real action.
+10. Every form must save valid data.
+11. Every dashboard must use actual database data.
+12. Do not hardcode production information.
+13. Do not create dummy pages.
+14. Do not use fake examination results.
+15. Do not expose student information publicly.
+16. Use database transactions for critical operations.
+17. Maintain audit history.
+18. Test every module.
+19. Update documentation.
+20. Never silently delete financial or academic history.
+
+# 50. FINAL ACCEPTANCE CRITERIA
+
+The project is complete only when:
+
+- Company management works.
+- Multi-branch management works.
+- User management works.
+- Roles and permissions work.
+- Enquiry CRM works.
+- Follow-up management works.
+- Admission management works.
+- Student management works.
+- Course management works.
+- Subject and syllabus management work.
+- Batch management works.
+- Timetable works.
+- Faculty management works.
+- Classroom management works.
+- Attendance works.
+- Fee structures work.
+- Fee collection works.
+- Discounts and scholarships work.
+- Refunds work.
+- Examination management works.
+- Question bank works.
+- Online examination works.
+- Results and grading work.
+- Assignments work.
+- Study materials work.
+- Online classes work through configured integrations.
+- LMS works.
+- Certificate generation works.
+- Certificate verification works.
+- Student portal works.
+- Parent portal works.
+- Faculty portal works.
+- Library works.
+- Transport works when enabled.
+- Hostel works when enabled.
+- HR and payroll work.
+- Placement works.
+- Accounting works.
+- Reports work.
+- Notifications work.
+- APIs work.
+- Automated tests pass.
+- Installation and deployment documentation is complete.
+
+# 51. FIRST TASK — START DEVELOPMENT
+
+Before writing code:
+
+1. Analyze the full requirements.
+2. Design the application architecture.
+3. Identify the shared and independent modules.
+4. Design the database schema.
+5. Prepare the ER diagram.
+6. Define the student admission lifecycle.
+7. Define the academic lifecycle.
+8. Define the fee collection lifecycle.
+9. Define the examination lifecycle.
+10. Define the course completion lifecycle.
+11. Define the user permission matrix.
+12. Prepare the development roadmap.
+13. Prepare the testing strategy.
+
+Present the architecture and database plan first.
+
+Then immediately start implementing Phase 1.
+
+Do not stop after preparing documentation or a dashboard mockup.
+
+Build functional modules one by one, connect them to the database, test each workflow, and continue until the complete ERP is implemented.
+
+FINAL OBJECTIVE:
+
+Build a commercially usable Coaching Institute Management ERP that allows an educational business to manage admissions, students, courses, batches, faculty, attendance, fees, examinations, results, assignments, online learning, certificates, placements, parents, employees, accounts, and multi-branch operations through one unified application.
