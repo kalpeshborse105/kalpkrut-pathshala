@@ -2,8 +2,8 @@
 
 /**
  * Hostinger Git auto-deploy bootstrap.
- * Restores .env, storage dirs, public_html link, then runs artisan safely
- * without shell_exec/passthru (still disabled on Hostinger).
+ * Hostinger publishes the repo into public_html (full Laravel tree).
+ * This restores .env, storage, caches — without shell_exec/passthru.
  */
 
 $root = dirname(__DIR__);
@@ -22,6 +22,9 @@ $envTarget = $root . '/.env';
 if (!is_file($envTarget) && is_file($envSource)) {
     copy($envSource, $envTarget);
     fwrite(STDOUT, "Restored .env from {$envSource}\n");
+} elseif (is_file($envTarget) && is_file($envSource) === false) {
+    // Keep a durable backup outside the publish directory.
+    @copy($envTarget, $envSource);
 }
 
 foreach ([
@@ -41,10 +44,13 @@ foreach ([
 @chmod($root . '/storage', 0775);
 @chmod($root . '/bootstrap/cache', 0775);
 
-$publicDir = $root . '/public';
-$publicHtml = $root . '/public_html';
-if (is_dir($publicDir)) {
-    if (is_link($publicHtml) || !file_exists($publicHtml)) {
+// When app already lives in public_html, do NOT create nested public_html symlink.
+// Routing is handled by root .htaccess -> public/
+$inPublicHtml = str_ends_with(str_replace('\\', '/', $root), '/public_html');
+if (!$inPublicHtml) {
+    $publicDir = $root . '/public';
+    $publicHtml = $root . '/public_html';
+    if (is_dir($publicDir) && (is_link($publicHtml) || !file_exists($publicHtml))) {
         if (is_link($publicHtml)) {
             @unlink($publicHtml);
         }
@@ -52,6 +58,18 @@ if (is_dir($publicDir)) {
             fwrite(STDOUT, "Linked public_html -> public\n");
         }
     }
+}
+
+// Ensure root rewrite exists for Hostinger docroot=public_html
+$htaccess = $root . '/.htaccess';
+if (!is_file($htaccess)) {
+    file_put_contents($htaccess, <<<'HTA'
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+HTA);
+    fwrite(STDOUT, "Wrote root .htaccess -> public/\n");
 }
 
 if (!is_file($root . '/artisan') || !is_file($envTarget)) {
