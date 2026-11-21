@@ -1,37 +1,39 @@
 # Pathshala Android App (APK & AAB)
 **By Kalpkrut Infotech Pvt Ltd**
 
-This Android native project wraps the Kalpkrut Pathshala web ERP into a production-ready Android App with:
-- Native Hardware Acceleration & Chrome Engine
-- File picker integration (Camera, Gallery, PDF documents for homework & admissions)
-- Swipe-to-Refresh
-- WhatsApp & Phone dialer direct linking
-- Back navigation stack history
-- Custom Status bar & Kalpkrut branding
+Native Android shell for the live ERP at:
+`https://pathshala.kalpkrutinfotech.com`
 
----
+Includes:
+- Production WebView (same login/API/data as website)
+- Top progress bar + full-screen loader
+- Pull-to-refresh
+- Offline retry screen
+- Back-stack navigation
+- File picker (camera/gallery/docs)
+- WhatsApp / tel / mailto handoff
+- Deep link support for the production domain
 
-## 🛠️ How to Generate APK & AAB
+## Build (CLI)
 
-### Step 1 — Open in Android Studio
-1. Open **Android Studio**.
-2. Click **Open** and select:
-   `C:\Users\Admin\.gemini\antigravity\scratch\kalpkrut-pathshala\android-app`
-
-### Step 2 — Set Your Production URL
-Open `app/src/main/java/com/kalpkrut/pathshala/MainActivity.kt` and change:
-```kotlin
-private val appUrl = "https://your-hostinger-domain.com"
+```bat
+cd android-app
+gradlew.bat assembleDebug
+gradlew.bat assembleRelease
+gradlew.bat bundleRelease
 ```
 
-### Step 3 — Build APK (For Direct Install / Testing)
-- In Android Studio menu: **Build** → **Build Bundle(s) / APK(s)** → **Build APK(s)**
-- The output APK will be generated at:
-  `android-app/app/build/outputs/apk/debug/app-debug.apk`
+Outputs:
+- Debug APK: `app/build/outputs/apk/debug/app-debug.apk`
+- Release APK: `app/build/outputs/apk/release/app-release.apk`
+- Play Store AAB: `app/build/outputs/bundle/release/app-release.aab`
 
-### Step 4 — Build AAB (Android App Bundle for Google Play Store)
-- In Android Studio menu: **Build** → **Generate Signed Bundle / APK**
-- Select **Android App Bundle** (.aab)
-- Create or select your `.jks` keystore
-- Build **Release**
-- The `.aab` file can now be uploaded directly to **Google Play Console**!
+## Signing
+
+`keystore.properties` + `pathshala-upload.jks` are local (gitignored).
+Keep the `.jks` backup safe — Play Console needs the same upload key forever.
+
+## Auth note
+
+Current app uses the website session login.
+Native auth (Firebase/OTP/biometric) can be added later without changing the ERP backend.

@@ -109,46 +109,33 @@ Visit: http://localhost:8000
 
 ---
 
-## Hostinger Deployment Guide
+## Hostinger Deployment Guide (Git Auto-Deploy)
 
-### Pre-requisites on Hostinger Business Plan
-- PHP 8.2+ enabled (set via hPanel)
-- MySQL database created in hPanel
-- Node.js available (or build assets locally)
+Live site: https://pathshala.kalpkrutinfotech.com
 
-### Step 1 — Connect GitHub to Hostinger
-1. In hPanel → **Git** section → Add Repository
-2. Enter your GitHub repo URL
-3. Set branch: main
-4. Set web root: public_html/kalpkrut-pathshala/public
+### One-time Hostinger setup
+1. PHP Configuration → remove `proc_open` and `symlink` from `disableFunctions`
+2. hPanel → **Git** → connect `https://github.com/kalpeshborse105/kalpkrut-pathshala.git`
+3. Branch: `master`
+4. Keep **Install Composer dependencies** enabled
+5. Website files must live at domain root (Laravel root), with `public_html` → `public`
+6. Production `.env` is restored automatically from `~/pathshala.production.env` by `scripts/hostinger-bootstrap.php` after every `composer install`
 
-### Step 2 — SSH into Hostinger
-`ash
-ssh u123456789@your-hostinger-server.com
-cd ~/public_html/kalpkrut-pathshala
-`
+### Every push (auto)
+Push to `master` (or click **Deploy** in hPanel Git). Hostinger will:
+1. Clone the public repo
+2. Run `composer install`
+3. Run `scripts/hostinger-bootstrap.php` (migrate, storage link, caches, public_html symlink)
 
-### Step 3 — Install dependencies on server
-`ash
-composer install --optimize-autoloader --no-dev
-npm install && npm run build
-`
+### Manual fallback (SSH)
+```bash
+ssh -p 65002 u796881501@YOUR_SSH_IP
+cd ~/domains/pathshala.kalpkrutinfotech.com
+bash scripts/hostinger-post-deploy.sh
+```
 
-### Step 4 — Environment setup on server
-`ash
-cp .env.example .env
-# Edit .env with Hostinger DB credentials
-nano .env
-php artisan key:generate
-php artisan migrate --seed
-php artisan storage:link
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-`
-
-### Step 5 — Set document root
-In hPanel → Domains → Point domain to: public_html/kalpkrut-pathshala/public
+### Build assets
+Build Vite assets locally before push (`npm run build`). `public/build` is committed so Hostinger does not need Node.
 
 ---
 
@@ -164,10 +151,16 @@ In hPanel → Domains → Point domain to: public_html/kalpkrut-pathshala/public
 
 ## Android / Mobile App
 
-The web ERP is fully responsive. For native Android APK:
-1. Use WebView wrapper or PWA approach
-2. Or use Capacitor.js to wrap the web app as APK
-3. See /mobile-app/ folder for Android project (coming soon)
+Native Android project is in `android-app/` (same live ERP URL).
+
+```bat
+cd android-app
+gradlew.bat assembleDebug
+gradlew.bat assembleRelease
+gradlew.bat bundleRelease
+```
+
+Install/test the APK first, then upload the AAB to Google Play Console.
 
 ---
 
