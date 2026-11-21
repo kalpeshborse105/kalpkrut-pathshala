@@ -2,25 +2,31 @@
 
 /**
  * Hostinger Git auto-deploy bootstrap.
- * Hostinger publishes the repo into public_html (full Laravel tree).
- * This restores .env, storage, caches — without shell_exec/passthru.
+ * Safe for CLI and one-shot web include after publish.
  */
 
 $root = dirname(__DIR__);
+$runningAsMain = (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === realpath(__FILE__));
+
+$finish = static function (string $message) use ($runningAsMain): void {
+    fwrite(STDOUT, $message);
+    if ($runningAsMain) {
+        exit(0);
+    }
+};
+
 chdir($root);
 
 $normalizedRoot = str_replace('\\', '/', $root);
 $isHostinger = is_dir('/home/u796881501') || str_contains($normalizedRoot, '/domains/');
 if (!$isHostinger) {
-    fwrite(STDOUT, "Hostinger bootstrap skipped (local environment)\n");
-    exit(0);
+    $finish("Hostinger bootstrap skipped (local environment)\n");
+    return;
 }
 
-// Hostinger Git runs composer inside ~/.git_clones/... before publishing.
-// Never migrate/cache from that temp tree.
 if (str_contains($normalizedRoot, '/.git_clones/')) {
-    fwrite(STDOUT, "Hostinger bootstrap skipped (build clone stage)\n");
-    exit(0);
+    $finish("Hostinger bootstrap skipped (build clone stage)\n");
+    return;
 }
 
 $home = getenv('HOME') ?: '/home/u796881501';
@@ -30,8 +36,7 @@ $envTarget = $root . '/.env';
 if (!is_file($envTarget) && is_file($envSource)) {
     copy($envSource, $envTarget);
     fwrite(STDOUT, "Restored .env from {$envSource}\n");
-} elseif (is_file($envTarget) && is_file($envSource) === false) {
-    // Keep a durable backup outside the publish directory.
+} elseif (is_file($envTarget)) {
     @copy($envTarget, $envSource);
 }
 
@@ -52,9 +57,7 @@ foreach ([
 @chmod($root . '/storage', 0775);
 @chmod($root . '/bootstrap/cache', 0775);
 
-// When app already lives in public_html, do NOT create nested public_html symlink.
-// Routing is handled by root .htaccess -> public/
-$inPublicHtml = str_ends_with(str_replace('\\', '/', $root), '/public_html');
+$inPublicHtml = str_ends_with($normalizedRoot, '/public_html');
 if (!$inPublicHtml) {
     $publicDir = $root . '/public';
     $publicHtml = $root . '/public_html';
@@ -68,7 +71,6 @@ if (!$inPublicHtml) {
     }
 }
 
-// Ensure root rewrite exists for Hostinger docroot=public_html
 $htaccess = $root . '/.htaccess';
 if (!is_file($htaccess)) {
     file_put_contents($htaccess, <<<'HTA'
@@ -81,8 +83,8 @@ HTA);
 }
 
 if (!is_file($root . '/artisan') || !is_file($envTarget)) {
-    fwrite(STDOUT, "Bootstrap skipped artisan steps (.env or artisan missing)\n");
-    exit(0);
+    $finish("Bootstrap skipped artisan steps (.env or artisan missing)\n");
+    return;
 }
 
 require $root . '/vendor/autoload.php';
@@ -90,15 +92,13 @@ $app = require $root . '/bootstrap/app.php';
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 $kernel->bootstrap();
 
-$commands = [
+foreach ([
     ['migrate', ['--force' => true]],
     ['storage:link', ['--force' => true]],
     ['config:cache', []],
     ['route:cache', []],
     ['view:cache', []],
-];
-
-foreach ($commands as [$name, $params]) {
+] as [$name, $params]) {
     fwrite(STDOUT, "Running: php artisan {$name}\n");
     try {
         $exit = $kernel->call($name, $params);
@@ -110,4 +110,4 @@ foreach ($commands as [$name, $params]) {
     }
 }
 
-fwrite(STDOUT, "Hostinger bootstrap complete\n");
+$finish("Hostinger bootstrap complete\n");
